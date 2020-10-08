@@ -26,13 +26,16 @@ echo json_encode($usuarios);
 //$usuario->login("Emerson", "1158");
 //echo $usuario;
 
+//Criando um novo usuário
+//$usuario = new Usuario();
+//$usuario->setDeslogin("aluno123");
+//$usuario->setDessenha("qwert");
+//$usuario->insert();
+//echo $usuario;
+
 $usuario = new Usuario();
-
-$usuario->setDeslogin("aluno123");
-$usuario->setDessenha("qwert");
-
-$usuario->insert();
-
+$usuario->loadById(1);
+$usuario->update("professor", "#$5657");
 echo $usuario;
 
 ?>
