@@ -22,8 +22,16 @@ echo json_encode($usuarios);
 //echo json_encode($search);
 
 //Carrega usuário usando login e senha
+//$usuario = new Usuario();
+//$usuario->login("Emerson", "1158");
+//echo $usuario;
+
 $usuario = new Usuario();
-$usuario->login("Emerson", "1158");
+
+$usuario->setDeslogin("aluno123");
+$usuario->setDessenha("qwert");
+
+$usuario->insert();
 
 echo $usuario;
 
